@@ -1,0 +1,55 @@
+project_folder/
+├── videos/
+│   ├── camera1/frames/
+│   │   ├── frame_000001.jpg
+│   │   ├── frame_000002.jpg
+│   │   └── ...
+│   ├── camera2/frames/
+│   └── camera3/frames/
+├── camera_config.json
+└── src/main.rs
+
+=========
+
+Camera config example
+[
+  {
+    "camera_id": "front_left",
+    "video_path": "./videos/camera1",
+    "camera_params": {
+      "position": [-2.0, -2.0, 2.0],
+      "yaw_degrees": 45.0,
+      "pitch_degrees": -15.0,
+      "roll_degrees": 0.0,
+      "fov_degrees": 60.0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  {
+    "camera_id": "front_right", 
+    "video_path": "./videos/camera2",
+    "camera_params": {
+      "position": [2.0, -2.0, 2.0],
+      "yaw_degrees": -45.0,
+      "pitch_degrees": -15.0,
+      "roll_degrees": 0.0,
+      "fov_degrees": 60.0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  {
+    "camera_id": "overhead",
+    "video_path": "./videos/camera3", 
+    "camera_params": {
+      "position": [0.0, 0.0, 3.0],
+      "yaw_degrees": 0.0,
+      "pitch_degrees": -90.0,
+      "roll_degrees": 0.0,
+      "fov_degrees": 90.0,
+      "width": 1920,
+      "height": 1080
+    }
+  }
+]
